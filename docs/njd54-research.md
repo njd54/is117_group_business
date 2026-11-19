@@ -4,7 +4,7 @@
 **Contributor:** Nicholas Duarte  
 **GitHub:** njd54  
 **Research date:** November 19, 2026  
-**Status:** Individual research completed; proposed features require testing
+**Status:** Individual research documented; peer feedback incorporated into planned checks; prototype verification pending
 
 ## 1. Business Concept
 
@@ -31,7 +31,7 @@ The proposed website will help students browse the menu, compare prices, and arr
 
 **Proposed CampusFuel feature:** Allow customers to select a pickup time when placing an order.
 
-**Verification needed:** Test whether a student can select a pickup time, review the order, and receive an accurate confirmation.
+**Verification needed:** Test whether a student can select a pickup time, see that time in the order review, and receive an accurate confirmation when the feature is implemented.
 
 ### Competitor 2 — Dunkin'
 
@@ -47,14 +47,14 @@ The proposed website will help students browse the menu, compare prices, and arr
 
 **Proposed CampusFuel feature:** Provide a simple menu with customizable drinks, clearly displayed prices, and an easy-to-understand order summary.
 
-**Verification needed:** Test whether a customer can select a drink, modify its options, and confirm the updated price before checkout.
+**Verification needed:** Test whether a customer can select a drink, modify its options, and confirm the updated total price before checkout.
 
 ## 3. Comparison of Research Findings
 
 | Category | Starbucks | Dunkin' | CampusFuel opportunity |
 |---|---|---|---|
 | Ordering | Mobile ordering | Mobile ordering | Simple student-focused ordering |
-| Pickup | Scheduled pickup | Order-ahead pickup | Pickup selection |
+| Pickup | Scheduled pickup | Order-ahead pickup | Pickup-time selection |
 | Customization | Product options | Customizable drinks | Basic drink customization |
 | Convenience | Plan around schedules | Save and reorder favorites | Fast navigation and clear prices |
 | Student focus | Not established by this research | Not established by this research | Test a student-specific experience |
@@ -82,7 +82,7 @@ The proposed website will help students browse the menu, compare prices, and arr
 - Unclear menu prices.
 - Difficulty finding pickup information.
 
-**Customer task:** Find a meal, check its price, and arrange pickup before the next class.
+**Customer task:** Find a meal, check its price, customize it if needed, and arrange pickup before the next class.
 
 **Assumptions requiring testing:** We have not interviewed students or measured how much time they spend ordering. The persona's needs are design hypotheses.
 
@@ -102,28 +102,41 @@ The proposed website will help students browse the menu, compare prices, and arr
 
 ## 6. Research-to-Feature Trace
 
-| Source observation | Proposed feature | Planned check |
+| Source observation | Proposed feature | Planned acceptance check |
 |---|---|---|
-| Starbucks offers scheduled pickup | Pickup-time selection | Select a time and confirm it appears in the order summary |
-| Dunkin' offers customization | Customizable menu items | Change drink options and verify the summary reflects them |
-| Dunkin' supports convenient ordering | Clear mobile ordering flow | Navigate menu to order summary at mobile width without horizontal scrolling |
-| Persona A may need affordable meals | Visible prices | Confirm each listed product displays its price before selection |
+| Starbucks offers scheduled pickup | Pickup-time selection | Select an available pickup time; verify the same time appears in the order review and eventual confirmation. |
+| Dunkin' offers customization | Customizable menu items | Change an item option; verify the selected option and any price change appear in the order summary. |
+| Dunkin' supports convenient ordering | Clear mobile ordering flow | Complete the planned ordering sequence on mobile and desktop; check that navigation and controls remain usable. |
+| Persona A may need affordable meals | Visible prices | Confirm each listed product displays its price before selection and that the order summary shows an accurate total. |
 
-These are proposed acceptance checks, not completed test results.
+These are proposed acceptance checks, not completed test results. The persona-based feature is a hypothesis, not a finding from the competitor sources.
 
-## 7. Planned Verification
+## 7. Planned Verification — Revised After Peer Feedback
 
-The following checks should be performed during a future prototype review:
+**Test scenario:** A customer wants to order a customizable drink for pickup between classes.
 
-- [ ] Open the CampusFuel prototype on desktop and mobile.
-- [ ] Locate the menu and product prices.
-- [ ] Select an item and customize it.
-- [ ] Choose a pickup time.
-- [ ] Confirm the order summary displays the correct selections.
-- [ ] Ask a reviewer to trace one research observation to a feature decision.
-- [ ] Record the actual results and any problems found.
+**Precondition:** A future CampusFuel prototype includes a menu item with a base price, at least one customization option, and selectable pickup times. Use an example item with known prices so the expected total can be calculated independently.
 
-**Current verification status:** The competitor source information has been reviewed. CampusFuel's proposed website features have not been implemented or tested as part of this research record.
+**Acceptance sequence (perform on both desktop and mobile):**
+
+1. Open the CampusFuel website and navigate to the menu.
+2. Select a menu item and verify its base price is visible before adding it to the order.
+3. Change a customization option and verify the selected option is reflected in the order.
+4. Check that the order summary displays the correct item, customization, quantity, and recalculated total price. If there are taxes or fees, display them separately and confirm the total includes them accurately.
+5. Choose an available pickup time and verify that the same time appears in the order review.
+6. Review the complete order **before** confirming it, including item details, total price, and pickup time.
+7. If a confirmation feature is implemented, submit the order and verify that the confirmation matches the reviewed details. Do not treat an unimplemented checkout as a passed test.
+
+**Device and accessibility checks:**
+- [ ] Repeat the sequence at a desktop viewport (for example, 1280 px wide).
+- [ ] Repeat the sequence at a mobile viewport (for example, 375 px wide).
+- [ ] Verify there is no horizontal scrolling needed to complete the ordering flow.
+- [ ] Verify menu controls, customization choices, and pickup-time selection are readable and operable.
+- [ ] Use keyboard navigation to check focus visibility and control order.
+- [ ] Record actual observed results, failures, screenshots or other evidence, and the date of testing.
+- [ ] Ask a reviewer to trace one research observation to a proposed feature and repeat the documented test when a prototype is available.
+
+**Current verification status:** The research and acceptance criteria are documented. CampusFuel's proposed ordering features have not been implemented or tested as part of this record; all prototype checks remain pending.
 
 ## 8. Individual Contribution and Group Integration
 
@@ -134,6 +147,7 @@ The following checks should be performed during a future prototype review:
 - Proposed convenience-focused positioning.
 - Defined the primary customer task.
 - Created the research-to-feature trace and planned checks.
+- Revised the planned acceptance checks in response to peer feedback on Issue #1.
 
 The teammate's research, contributions, and review decisions will be documented separately by that teammate.
 
@@ -141,15 +155,34 @@ The group must still compare three relevant sites, two positioning approaches, a
 
 ## 9. AI Assistance
 
-ChatGPT assisted with identifying official competitor sources, organizing observations, developing a fictional persona hypothesis, and drafting the research-to-feature trace.
+ChatGPT assisted with identifying official competitor sources, organizing observations, developing a fictional persona hypothesis, drafting the research-to-feature trace, and revising acceptance criteria in response to peer feedback.
 
-The competitor observations are based on the linked sources. The persona, positioning, and CampusFuel features are proposed ideas rather than verified customer findings.
+The competitor observations are based on the linked sources. The persona, positioning, and CampusFuel features are proposed ideas rather than verified customer findings. Actual prototype testing and reviewer confirmation remain pending.
 
-## 10. Next Steps
+## 10. Peer Feedback and Revision Record
 
-1. Commit this individual research contribution to the shared repository.
-2. Have the teammate complete their independent research.
-3. Compare both audience hypotheses and positioning approaches.
-4. Select the group's final customer task and explain the decision.
-5. Request peer review through a GitHub issue.
-6. Document the response, any revision, linked commit, and reviewer verification.
+**Review issue:** https://github.com/njd54/is117_group_business/issues/1  
+**Feedback date:** November 19, 2026  
+**Decision:** Revise
+
+**Feedback addressed:** The peer-review suggestion called for a more specific end-to-end pickup-ordering acceptance check, including item selection, customization, updated total price, pickup time, order review, and testing on desktop and mobile.
+
+**Revision made in this document:** Section 6 now links the proposed features to more precise checks. Section 7 now defines a complete ordering scenario, expected outcomes, device checks, and evidence to record.
+
+**Reason for decision:** A defined sequence makes the proposed customer task easier to evaluate and reduces ambiguity about what a successful ordering experience should demonstrate.
+
+**Revision commit:** Pending — add the actual commit URL after pushing this file.  
+**Documentation verification:** Pending — check the committed file on GitHub and confirm the revised criteria are visible.  
+**Reviewer retry:** Pending — ask the reviewer to confirm that the revised criteria address the suggestion.  
+**Prototype verification:** Pending — no claim is made that an ordering flow is implemented or functioning.
+
+Keep the issue open until the review is resolved or clearly document any outstanding confirmation.
+
+## 11. Next Steps
+
+1. Commit and push this revised `docs/nick-research.md` file.
+2. Add the actual revision commit link to GitHub Issue #1 and request a reviewer retry.
+3. Verify the revised documentation is visible in the repository and record the result.
+4. Have the teammate complete their independent research and integrate the group's three-site, two-positioning, and two-persona comparison.
+5. Select the group's final customer task and explain the decision.
+6. When a prototype exists, perform the planned ordering, desktop, mobile, and accessibility checks and record actual results.
